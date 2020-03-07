@@ -14,10 +14,17 @@
 
 <h2>
     <%
-        if (request.getParameter("name").equals("asd")) {
-    %>
-            <h4>jest OK</h4>
-    <%
+        String action = request.getParameter("action");
+        int a = Integer.valueOf(request.getParameter("a"));
+        int b = Integer.valueOf(request.getParameter("b"));
+
+        switch (action) {
+            case "add":
+                out.print(a+b);
+            break;
+            case "sub":
+                out.print(a-b);
+            break;
         }
     %>
 </h2>
