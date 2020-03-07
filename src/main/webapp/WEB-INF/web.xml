@@ -31,4 +31,24 @@
         <servlet-name>person</servlet-name>
         <url-pattern>/person</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>album</servlet-name>
+        <jsp-file>/album.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>album</servlet-name>
+        <url-pattern>/album</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>submitAlbum</servlet-name>
+        <jsp-file>/submitAlbum.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>submitAlbum</servlet-name>
+        <url-pattern>/submitAlbum</url-pattern>
+    </servlet-mapping>
 </web-app>
