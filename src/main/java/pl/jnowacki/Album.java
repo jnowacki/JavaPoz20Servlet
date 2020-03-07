@@ -1,5 +1,7 @@
 package pl.jnowacki;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.io.Serializable;
 
 public class Album implements Serializable {
@@ -24,5 +26,17 @@ public class Album implements Serializable {
 
     public void setAuthor(String author) {
         this.author = author;
+    }
+
+    public boolean isValid() {
+        return !StringUtils.isBlank(name) && !StringUtils.isBlank(author);
+    }
+
+    @Override
+    public String toString() {
+        return "Album{" +
+                "name='" + name + '\'' +
+                ", author='" + author + '\'' +
+                '}';
     }
 }
