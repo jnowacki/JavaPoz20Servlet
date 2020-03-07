@@ -11,4 +11,24 @@
     <session-config>
         <session-timeout>15</session-timeout>
     </session-config>
+
+    <servlet>
+        <servlet-name>JSP</servlet-name>
+        <jsp-file>/index.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>JSP</servlet-name>
+        <url-pattern>/jsp</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>person</servlet-name>
+        <jsp-file>/person.jsp</jsp-file>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>person</servlet-name>
+        <url-pattern>/person</url-pattern>
+    </servlet-mapping>
 </web-app>
