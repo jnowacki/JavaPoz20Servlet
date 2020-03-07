@@ -31,13 +31,7 @@
 </head>
 <body>
 
-<%
-    if (session.getAttribute("albums") == null) {
-        session.setAttribute("albums", new ArrayList<Album>());
-    }
-%>
-
-<form action="${pageContext.request.contextPath}/album" method="get">
+<form method="post">
 
     <label for="name" class="label">Name:</label>
     <input type="text" id="name" name="name"><br/>
