@@ -14,6 +14,10 @@
         margin-bottom: 10px;
     }
 
+    .last {
+        background-color: yellowgreen;
+    }
+
     table, th, td {
         border: 1px solid black;
     }
@@ -56,21 +60,29 @@
     </c:choose>
 </c:if>
 
-<table>
-    <tr>
-        <th>Lp.</th>
-        <th>Name</th>
-        <th>Author</th>
-    </tr>
+<c:choose>
+    <c:when test="${albums.size() > 0}">
+        <table>
+            <tr>
+                <th>Lp.</th>
+                <th>Name</th>
+                <th>Author</th>
+            </tr>
 
-    <c:forEach items="${albums}" var="al" varStatus="status">
-        <tr>
-            <td>${status.count}</td>
-            <td>${al.name}</td>
-            <td>${al.author}</td>
-        </tr>
-    </c:forEach>
-</table>
+            <c:forEach items="${albums}" var="al" varStatus="status">
+                <tr class="${al == album ? 'last' : ''}">
+                    <td>${status.count}</td>
+                    <td>${al.name}</td>
+                    <td>${al.author}</td>
+                </tr>
+            </c:forEach>
+        </table>
+    </c:when>
+
+    <c:otherwise>
+        <h4>Dodaj pierwszy album</h4>
+    </c:otherwise>
+</c:choose>
 
 </body>
 </html>
