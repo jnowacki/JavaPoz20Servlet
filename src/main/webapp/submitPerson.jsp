@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form action="/JavaPoz20Servlet_war/person" method="post">
+<form action="${pageContext.request.contextPath}/person" method="post">
     <input type="text" name="name">
     <input type="text" name="pwd">
     <input type="submit" value="OK">

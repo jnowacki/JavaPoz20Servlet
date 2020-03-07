@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form action="/JavaPoz20Servlet_war/album" method="get">
+<form action="${pageContext.request.contextPath}/album" method="get">
     Name: <input type="text" name="name"><br/>
     Author: <input type="text" name="author">
     <input type="submit" value="OK">

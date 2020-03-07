@@ -12,9 +12,9 @@
 <jsp:useBean id="album" class="pl.jnowacki.Album"/>
 <jsp:setProperty name="album" property="*"/>
 
-<%=album.getName()%>
+${album.name}
 <br/>
-<%=album.getAuthor()%>
+${album.author}
 
 </body>
 </html>
