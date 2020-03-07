@@ -9,9 +9,9 @@
 <jsp:useBean id="person1" class="pl.jnowacki.Person"/>
 <jsp:setProperty name="person1" property="*"/>
 
-<%=person1.getName()%>
+<h1>${person1.name}</h1>
 <br/>
-<%=person1.getPwd()%>
+<h2>${person1.pwd}</h2>
 
 </body>
 </html>
