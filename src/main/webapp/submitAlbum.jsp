@@ -9,8 +9,10 @@
 </head>
 <body>
 
-<form>
-
+<form action="/JavaPoz20Servlet_war/album" method="get">
+    Name: <input type="text" name="name"><br/>
+    Author: <input type="text" name="author">
+    <input type="submit" value="OK">
 </form>
 
 </body>
