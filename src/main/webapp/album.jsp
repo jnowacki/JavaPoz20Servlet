@@ -18,6 +18,10 @@
         background-color: yellowgreen;
     }
 
+    .red {
+        background-color: red;
+    }
+
     table, th, td {
         border: 1px solid black;
     }
@@ -70,7 +74,7 @@
             </tr>
 
             <c:forEach items="${albums}" var="al" varStatus="status">
-                <tr class="${al == album ? 'last' : ''}">
+                <tr class="${al == album ? 'last' : ''} ${al.name.substring(0, 1).equalsIgnoreCase("a") ? 'red': ''}">
                     <td>${status.count}</td>
                     <td>${al.name}</td>
                     <td>${al.author}</td>
